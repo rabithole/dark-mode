@@ -6,11 +6,13 @@ export function useDarkMode() {
 
 	useEffect(() => {
 		let bodyClass = document.querySelector('body');
-		if(someValue === true) {
-			bodyClass.classList.add('dark-mode');
-		} else{
-			bodyClass.classList.remove('dark-mode');
-		}
+
+		someValue ? bodyClass.classList.add('dark-mode') : bodyClass.classList.remove('dark-mode');
+		// if(someValue === true) {
+		// 	bodyClass.classList.add('dark-mode');
+		// } else{
+		// 	bodyClass.classList.remove('dark-mode');
+		// }
 	}, [someValue]);
 	return [someValue, setSomeValue]
 }
